@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корпоративная культура</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        /* DS MAIN — тёмная тема (переменные с макета node 15115:36797) */
+        --figma-surface-0: #0f1018;
+        --figma-surface-10: #181a26;
+        --figma-surface-20: #5a5d7517;
+        --figma-surface-lim-10: rgba(255, 255, 255, 0.2);
+        --figma-border-surface: rgba(255, 255, 255, 0.04);
+        --figma-border-main-0: transparent;
+        --figma-border-fill-btn: rgba(255, 255, 255, 0.04);
+        --figma-border-glass: rgba(255, 255, 255, 0.08);
+
+        /* Текст */
+        --figma-typo-0: #ffffff;
+        --figma-typo-10: #d2d4df;
+        --figma-typo-20: #6d728d;
+        --figma-typo-on-primary: #ffffff;
+
+        /* Акценты */
+        --figma-primary: #3949ab;
+        --figma-primary-ring: #3f51b5;
+        --figma-primary-soft: rgba(63, 81, 181, 0.15);
+        --figma-btn-fill-surfaces-bg: #181a26;
+        --figma-btn-fill-surfaces-text: #ffffff;
+        --figma-btn-lim-text: #7986cb;
+        --figma-btn-lim-bg: rgba(63, 81, 181, 0.15);
+        --figma-primary-soft-border: rgba(63, 81, 181, 0);
+        --figma-counter: #ff5722;
+        --figma-counter-text: #ffffff;
+        --figma-blue-glow: rgba(99, 166, 255, 0.1);
+        --figma-glass-top: rgba(255, 255, 255, 0.04);
+        --figma-glass-edge: rgba(255, 255, 255, 0.08);
+
+        --radius-header: 16px;
+        --radius-card: 24px;
+        --radius-sim: 28px;
+        --radius-btn: 10px;
+        --topic-card-min-w: 189px;
+        --sim-card-min-w: 248px;
+        --radius-pill: 999px;
+
+        --space-body: 16px;
+        --space-header: 12px;
+        --space-card: 16px;
+        --gap-header: 8px;
+        --gap-hero-bottom: 48px;
+        --gap-carousel: 12px;
+        --gap-sim-row: 48px;
+        --gap-sim-stack: 28px;
+
+        --font-body: "Roboto Flex", system-ui, sans-serif;
+        --font-logo: "Mulish", var(--font-body);
+        --fv-roboto: "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738,
+          "YTLC" 514, "YTUC" 712, "wdth" 100;
+
+        /* TYPO/Body/B2-Regular */
+        --text-b2-size: 16px;
+        --text-b2-lh: 20px;
+        --text-b2-track: 0.1px;
+        --text-b2-weight: 400;
+        /* TYPO/Display/D2-Bold */
+        --text-d2-size: 44px;
+        --text-d2-lh: 48px;
+        --text-d2-track: 0.1px;
+        --text-d2-weight: 700;
+        /* TYPO/Heading/H2-Medium */
+        --text-h2-size: 28px;
+        --text-h2-lh: 32px;
+        --text-h2-track: 0.2px;
+        --text-h2-weight: 500;
+        /* TYPO/Heading/H5-Bold */
+        --text-h5-size: 20px;
+        --text-h5-lh: 24px;
+        --text-h5-track: 0.2px;
+        --text-h5-weight: 700;
+        /* Button Fill / Surfaces (DS MAIN) */
+        --text-btn-size: 16px;
+        --text-btn-lh: 22px;
+        --btn-gap: 6px;
+        --btn-pad-x: 14px;
+        --btn-pad-y: 8px;
+        --text-btn-track: 0.2px;
+        --text-btn-weight: 500;
+        /* Логотип: Muller Bold 16 → Mulish 700 */
+        --text-logo-size: 16px;
+        --text-logo-lh: 32px;
+        --text-logo-track: -0.16px;
+        --text-logo-weight: 700;
+        /* Counter */
+        --text-counter-size: 9px;
+        --text-counter-lh: 8px;
+        --text-counter-track: 0.09px;
+        --text-counter-weight: 500;
+
+        --container-max: 1320px;
+        --mascot-col: 310px;
+
+        /* Иконки Lucide в макете: внутри фиксированного квадрата с overflow + inset у глифа */
+      }
+
+      /* Унифицированная оболочка иконки (как в Figma: size + overflow-clip + pad) */
+      .ui-icon {
+        position: relative;
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+        vertical-align: middle;
+      }
+
+      .ui-icon--16 {
+        width: 16px;
+        height: 16px;
+      }
+
+      .ui-icon--18 {
+        width: 18px;
+        height: 18px;
+      }
+
+      .ui-icon--22 {
+        width: 22px;
+        height: 22px;
+      }
+
+      .ui-icon--24 {
+        width: 24px;
+        height: 24px;
+      }
+
+      .ui-icon__fit {
+        position: absolute;
+        display: block;
+      }
+
+      .ui-icon__fit img {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      /* Inset глифа — чуть меньше, чтобы stroke не обрезался */
+      .ui-icon__fit--grid {
+        inset: 4%;
+      }
+
+      .ui-icon__fit--bell {
+        inset: 0 4% 0 4%;
+      }
+
+      .ui-icon__fit--arrow {
+        inset: 12%;
+      }
+
+      .ui-icon__fit--chev-down {
+        inset: 28% 16%;
+      }
+
+      .ui-icon__fit--chev-right {
+        inset: 16% 28%;
+      }
+
+      .ui-icon__fit--bulb {
+        inset: 0 16% 0 16%;
+      }
+
+      .ui-icon__fit--rocket {
+        inset: 0 2% 2% 2%;
+      }
+
+      .ui-icon__fit--route {
+        inset: 0 4% 0 4%;
+      }
+
+      .ui-icon__fit--user-cog {
+        inset: 2% 0 2% 0;
+      }
+
+      .ui-icon__fit--lang {
+        inset: 18% 8% 18% 8%;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: var(--font-body);
+        font-size: var(--text-b2-size);
+        font-weight: var(--text-b2-weight);
+        line-height: var(--text-b2-lh);
+        letter-spacing: var(--text-b2-track);
+        font-optical-sizing: auto;
+        font-variation-settings: var(--fv-roboto);
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        background: var(--figma-surface-0);
+        color: var(--figma-typo-0);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .page {
+        position: relative;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        padding: var(--space-body);
+        overflow-x: clip;
+      }
+
+      .page__deco {
+        position: absolute;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .page__deco--tl {
+        top: 223px;
+        left: -189px;
+        width: 428px;
+        height: 521px;
+      }
+
+      .page__deco--br {
+        right: -65px;
+        bottom: -25px;
+        width: 428px;
+        height: 501px;
+      }
+
+      .page__deco img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .page__inner {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: var(--gap-header);
+        min-height: 0;
+      }
+
+      .header__row {
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+        gap: var(--gap-header);
+      }
+
+      .header__panel {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: var(--space-header);
+        border: 1px solid transparent;
+        border-radius: var(--radius-header);
+        background: var(--figma-surface-10);
+      }
+
+      .header__panel--grow {
+        flex: 1;
+        min-width: 0;
+        justify-content: center;
+      }
+
+      .header__panel--actions {
+        flex-shrink: 0;
+        gap: var(--gap-header);
+      }
+
+      .icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 14px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        background: transparent;
+        cursor: pointer;
+      }
+
+      .brand {
+        display: flex;
+        min-width: 0;
+        align-items: center;
+        gap: var(--gap-header);
+      }
+
+      .brand__logo {
+        position: relative;
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+      }
+
+      .brand__logo-mat {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        max-height: 100%;
+        aspect-ratio: 32 / 30;
+        transform: translateY(-50%);
+      }
+
+      .brand__logo-fit {
+        position: absolute;
+        inset: 2.31% 0.25% 0.2% 0.25%;
+      }
+
+      .brand__logo-fit img {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .brand__title {
+        margin: 0;
+        overflow: hidden;
+        font-family: var(--font-logo);
+        font-size: var(--text-logo-size);
+        font-weight: var(--text-logo-weight);
+        line-height: var(--text-logo-lh);
+        letter-spacing: var(--text-logo-track);
+        color: var(--figma-typo-0);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      /* Переключатель языка: в макете компактный pill, без фикс. 50px — иначе ломается с chevron */
+      .lang {
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        gap: 4px;
+        padding: 3px;
+        border-radius: var(--radius-pill);
+        background: var(--figma-primary-soft);
+      }
+
+      .lang__tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 10px;
+        border-radius: var(--radius-pill);
+        background: var(--figma-primary);
+      }
+
+      .lang__chev {
+        display: flex;
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        padding-right: 2px;
+      }
+
+      .notify {
+        position: relative;
+        display: inline-flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 14px;
+        border: 1px solid var(--figma-primary-soft-border);
+        border-radius: var(--radius-pill);
+        background: var(--figma-primary-soft);
+        backdrop-filter: blur(10px);
+      }
+
+      .notify__badge {
+        position: absolute;
+        top: -5px;
+        right: -4px;
+        min-width: 18px;
+        padding: 3px 4px;
+        border-radius: var(--radius-pill);
+        background: var(--figma-counter);
+        box-shadow: 0 1px 1.9px rgba(255, 87, 34, 0.48);
+        font-family: var(--font-body);
+        font-size: var(--text-counter-size);
+        font-weight: var(--text-counter-weight);
+        line-height: var(--text-counter-lh);
+        letter-spacing: var(--text-counter-track);
+        color: var(--figma-counter-text);
+        text-align: center;
+        font-variation-settings: var(--fv-roboto);
+      }
+
+      .avatar {
+        flex-shrink: 0;
+        width: 34px;
+        height: 34px;
+        padding: 2px;
+        overflow: hidden;
+        border: 1px solid var(--figma-primary-ring);
+        border-radius: var(--radius-pill);
+      }
+
+      .avatar img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        object-fit: cover;
+      }
+
+      .main {
+        display: flex;
+        flex: 1;
+        width: 100%;
+        min-height: 0;
+        justify-content: center;
+      }
+
+      .container {
+        display: flex;
+        width: 100%;
+        max-width: var(--container-max);
+        flex-direction: column;
+        gap: var(--gap-header);
+      }
+
+      .hero {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: var(--gap-hero-bottom);
+        padding: var(--space-card);
+        overflow: hidden;
+        border: 1px solid var(--figma-border-surface);
+        border-radius: var(--radius-card);
+        background: var(--figma-surface-20);
+      }
+
+      .hero__glow {
+        position: absolute;
+        top: -12%;
+        right: -1px;
+        bottom: 20%;
+        width: min(345px, 45vw);
+        pointer-events: none;
+        opacity: 0.92;
+      }
+
+      .hero__glow img {
+        position: absolute;
+        max-width: none;
+      }
+
+      .hero__glow .blob-a {
+        top: 10%;
+        right: -40%;
+        width: 180%;
+        height: auto;
+      }
+
+      .hero__glow .blob-b {
+        top: 25%;
+        right: -20%;
+        width: 140%;
+        height: auto;
+        opacity: 0.88;
+      }
+
+      .hero__heading {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero__kicker {
+        margin: 0 0 10px;
+        font-size: var(--text-b2-size);
+        font-weight: var(--text-b2-weight);
+        line-height: var(--text-b2-lh);
+        letter-spacing: var(--text-b2-track);
+        color: var(--figma-typo-10);
+      }
+
+      .hero__title {
+        margin: 0;
+        font-size: var(--text-d2-size);
+        font-weight: var(--text-d2-weight);
+        line-height: var(--text-d2-lh);
+        letter-spacing: var(--text-d2-track);
+        color: var(--figma-typo-0);
+      }
+
+      .hero__bottom {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: 24px var(--gap-hero-bottom);
+      }
+
+      @media (min-width: 900px) {
+        .hero__bottom {
+          flex-wrap: nowrap;
+        }
+      }
+
+      .btn-primary {
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        gap: var(--btn-gap);
+        padding: var(--btn-pad-y) var(--btn-pad-x);
+        border: 1px solid var(--figma-border-fill-btn);
+        border-radius: var(--radius-btn);
+        background: var(--figma-btn-fill-surfaces-bg);
+        font-family: var(--font-body);
+        font-size: var(--text-btn-size);
+        font-weight: var(--text-btn-weight);
+        line-height: var(--text-btn-lh);
+        letter-spacing: var(--text-btn-track);
+        color: var(--figma-btn-fill-surfaces-text);
+        text-decoration: none;
+        cursor: pointer;
+        font-variation-settings: var(--fv-roboto);
+      }
+
+      .btn-primary .ui-icon {
+        width: 22px;
+        height: 22px;
+      }
+
+      .carousel-wrap {
+        display: flex;
+        flex: 1;
+        min-width: 0;
+        align-items: stretch;
+        gap: var(--gap-carousel);
+        overflow: hidden;
+      }
+
+      .carousel {
+        display: flex;
+        flex: 1;
+        min-width: 0;
+        gap: var(--gap-carousel);
+        padding-bottom: 4px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-color: rgba(90, 93, 117, 0.28) transparent;
+        scrollbar-width: thin;
+      }
+
+      .carousel::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      .carousel::-webkit-scrollbar-thumb {
+        border-radius: var(--radius-pill);
+        background: var(--figma-border-glass);
+      }
+
+      .topic-card {
+        display: flex;
+        flex: 1 1 var(--topic-card-min-w);
+        min-width: var(--topic-card-min-w);
+        flex-direction: column;
+        gap: var(--space-card);
+        padding: var(--space-card);
+        border: 1px solid var(--figma-glass-edge);
+        border-radius: var(--radius-card);
+        background: linear-gradient(
+          180deg,
+          var(--figma-surface-lim-10) 0%,
+          var(--figma-blue-glow) 100%
+        );
+        color: var(--figma-typo-10);
+        text-align: left;
+        text-decoration: none;
+        backdrop-filter: blur(20px);
+      }
+
+      @media (max-width: 899px) {
+        .topic-card {
+          flex: 0 0 var(--topic-card-min-w);
+          min-width: var(--topic-card-min-w);
+        }
+      }
+
+      .topic-card .ui-icon {
+        align-self: flex-start;
+      }
+
+      .topic-card h3 {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 40px;
+        max-height: 40px;
+        margin: 0;
+        overflow: hidden;
+        font-size: var(--text-h5-size);
+        font-weight: var(--text-h5-weight);
+        line-height: var(--text-h5-lh);
+        letter-spacing: var(--text-h5-track);
+        color: var(--figma-typo-10);
+        text-align: left;
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .carousel__next {
+        display: flex;
+        flex-shrink: 0;
+        width: 34px;
+        align-self: stretch;
+        align-items: center;
+        justify-content: center;
+        padding-block: 10px;
+        border: 1px solid var(--figma-glass-edge);
+        border-radius: var(--radius-sim);
+        background: linear-gradient(
+          180deg,
+          var(--figma-surface-lim-10) 0%,
+          var(--figma-blue-glow) 100%
+        );
+        backdrop-filter: blur(20px);
+        cursor: pointer;
+      }
+
+      .sim-section {
+        width: 100%;
+        padding: var(--space-card) 0;
+      }
+
+      .sim-section__row {
+        display: flex;
+        width: 100%;
+        align-items: flex-end;
+        gap: 32px var(--gap-sim-row);
+      }
+
+      @media (min-width: 1100px) {
+        .sim-section__row {
+          flex-wrap: nowrap;
+        }
+      }
+
+      @media (max-width: 1099px) {
+        .sim-section__row {
+          flex-wrap: wrap;
+        }
+      }
+
+      .sim-section__content {
+        display: flex;
+        flex: 1 1 0;
+        min-width: 0;
+        flex-direction: column;
+        gap: var(--gap-sim-stack);
+      }
+
+      .sim-section h2 {
+        max-width: 560px;
+        margin: 0;
+        padding: 0 var(--space-card);
+        font-size: var(--text-h2-size);
+        font-weight: var(--text-h2-weight);
+        line-height: var(--text-h2-lh);
+        letter-spacing: var(--text-h2-track);
+        color: var(--figma-typo-0);
+        text-align: left;
+      }
+
+      .sim-cards {
+        display: grid;
+        width: 100%;
+        gap: var(--gap-header);
+        grid-template-columns: 1fr;
+      }
+
+      @media (min-width: 640px) {
+        .sim-cards {
+          grid-template-columns: repeat(2, minmax(var(--sim-card-min-w), 1fr));
+        }
+      }
+
+      @media (min-width: 1100px) {
+        .sim-cards {
+          grid-template-columns: repeat(3, minmax(var(--sim-card-min-w), 1fr));
+        }
+      }
+
+      .sim-card {
+        position: relative;
+        display: flex;
+        min-width: var(--sim-card-min-w);
+        min-height: 248px;
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: var(--radius-sim);
+      }
+
+      .sim-card__inner {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: var(--space-card);
+        border: 1px solid var(--figma-border-surface);
+        border-radius: inherit;
+        background-color: var(--figma-surface-10);
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 371 248' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'%3E%3Crect x='0' y='0' height='100%25' width='100%25' fill='url(%23grad)' opacity='0.2'/%3E%3Cdefs%3E%3CradialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(8.6 -17.986 34.689 25.001 36 222.22)'%3E%3Cstop stop-color='rgba(99,166,255,1)' offset='0'/%3E%3Cstop stop-color='rgba(138,189,255,0.6)' offset='0.25'/%3E%3Cstop stop-color='rgba(177,211,255,0.25)' offset='0.5'/%3E%3Cstop stop-color='rgba(24,26,38,1)' offset='1'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E"),
+          linear-gradient(90deg, #181a26 0%, #181a26 100%);
+      }
+
+      .sim-card__body {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        width: 100%;
+        min-height: 224px;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .sim-card__label {
+        margin: 0 0 6px;
+        font-size: var(--text-b2-size);
+        font-weight: var(--text-b2-weight);
+        line-height: var(--text-b2-lh);
+        letter-spacing: var(--text-b2-track);
+        color: var(--figma-typo-20);
+      }
+
+      .sim-card__title {
+        margin: 0;
+        min-height: 48px;
+        font-size: var(--text-h5-size);
+        font-weight: var(--text-h5-weight);
+        line-height: var(--text-h5-lh);
+        letter-spacing: var(--text-h5-track);
+        color: var(--figma-typo-10);
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .btn-ghost {
+        align-self: flex-end;
+        margin-top: auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--btn-gap);
+        padding: var(--btn-pad-y) var(--btn-pad-x);
+        border: 1px solid transparent;
+        border-radius: var(--radius-btn);
+        background: var(--figma-primary-soft);
+        backdrop-filter: blur(10px);
+        font-family: var(--font-body);
+        font-size: var(--text-btn-size);
+        font-weight: var(--text-btn-weight);
+        line-height: var(--text-btn-lh);
+        letter-spacing: var(--text-btn-track);
+        color: var(--figma-btn-lim-text);
+        cursor: pointer;
+        font-variation-settings: var(--fv-roboto);
+      }
+
+      .sim-card__deco {
+        position: absolute;
+        top: 119px;
+        left: -52px;
+        width: 179px;
+        height: 179px;
+        pointer-events: none;
+        opacity: 0.88;
+      }
+
+      .sim-card__deco img {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        max-width: none;
+      }
+
+      .mascot-wrap {
+        position: relative;
+        display: flex;
+        width: var(--mascot-col);
+        max-width: 100%;
+        flex-shrink: 0;
+        align-self: flex-end;
+        justify-content: center;
+        padding-bottom: 8px;
+      }
+
+      @media (max-width: 1099px) {
+        .mascot-wrap {
+          width: 100%;
+          margin-inline: auto;
+        }
+      }
+
+      .mascot-wrap__shadow {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 419px;
+        height: 51px;
+        pointer-events: none;
+        transform: translateX(calc(-50% + 18px));
+      }
+
+      .mascot-wrap__shadow img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .mascot {
+        position: relative;
+        width: 287px;
+        height: 301px;
+        max-width: 100%;
+      }
+
+      .mascot img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media (max-width: 720px) {
+        :root {
+          --text-d2-size: 32px;
+          --text-d2-lh: 36px;
+          --text-h2-size: 22px;
+          --text-h2-lh: 28px;
+        }
+
+        .hero__bottom {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .carousel-wrap {
+          width: 100%;
+        }
+
+        .sim-section h2 {
+          padding-inline: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="page__deco page__deco--tl" aria-hidden="true">
+        <img
+          src="https://www.figma.com/api/mcp/asset/7cb8787e-9a55-42c9-83dc-669ff3b337b9"
+          alt=""
+          width="428"
+          height="521"
+          decoding="async"
+        />
+      </div>
+      <div class="page__deco page__deco--br" aria-hidden="true">
+        <img
+          src="https://www.figma.com/api/mcp/asset/ff328d52-a674-4441-9f5b-75c4e2e03566"
+          alt=""
+          width="428"
+          height="501"
+          decoding="async"
+        />
+      </div>
+
+      <div class="page__inner">
+        <header>
+          <div class="header__row">
+            <div class="header__panel">
+              <button type="button" class="icon-btn" aria-label="Меню">
+                <span class="ui-icon ui-icon--18" aria-hidden="true">
+                  <span class="ui-icon__fit ui-icon__fit--grid">
+                    <img
+                      src="https://www.figma.com/api/mcp/asset/0702c782-3f73-4320-8d04-3705783d5377"
+                      alt=""
+                      decoding="async"
+                    />
+                  </span>
+                </span>
+              </button>
+            </div>
+            <div class="header__panel header__panel--grow">
+              <div class="brand">
+                <div class="brand__logo">
+                  <div class="brand__logo-mat">
+                    <div class="brand__logo-fit">
+                      <img
+                        src="https://www.figma.com/api/mcp/asset/b12a26b4-d845-45c9-a120-98e960689a73"
+                        alt=""
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <p class="brand__title">Корпоративная культура</p>
+              </div>
+            </div>
+            <div class="header__panel header__panel--actions">
+              <div class="lang" role="group" aria-label="Язык">
+                <div class="lang__tab">
+                  <span class="ui-icon ui-icon--16" aria-hidden="true">
+                    <span class="ui-icon__fit ui-icon__fit--lang">
+                      <img
+                        src="https://www.figma.com/api/mcp/asset/17e9c63f-b773-4562-bdae-0bb26e22ac2d"
+                        alt="RU"
+                        decoding="async"
+                      />
+                    </span>
+                  </span>
+                </div>
+                <span class="lang__chev" aria-hidden="true">
+                  <span class="ui-icon ui-icon--16">
+                    <span class="ui-icon__fit ui-icon__fit--chev-down">
+                      <img
+                        src="https://www.figma.com/api/mcp/asset/8162c111-ba8f-4ed4-b4f1-1f593af798d9"
+                        alt=""
+                        decoding="async"
+                      />
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <button type="button" class="notify" aria-label="Уведомления, 1 новое">
+                <span class="ui-icon ui-icon--18" aria-hidden="true">
+                  <span class="ui-icon__fit ui-icon__fit--bell">
+                    <img
+                      src="https://www.figma.com/api/mcp/asset/55309f37-aacd-4a35-8f88-30a3b4a078ed"
+                      alt=""
+                      decoding="async"
+                    />
+                  </span>
+                </span>
+                <span class="notify__badge">1</span>
+              </button>
+              <div class="avatar" aria-hidden="true">
+                <img
+                  src="https://www.figma.com/api/mcp/asset/d926a070-d894-47e8-8a80-5887ed143aa1"
+                  alt=""
+                  width="30"
+                  height="30"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main class="main">
+          <div class="container">
+            <section class="hero" aria-labelledby="hero-title">
+              <div class="hero__glow" aria-hidden="true">
+                <img
+                  class="blob-a"
+                  src="https://www.figma.com/api/mcp/asset/2f425c41-258b-4fbe-90f5-3520d323c462"
+                  alt=""
+                  decoding="async"
+                />
+                <img
+                  class="blob-b"
+                  src="https://www.figma.com/api/mcp/asset/180978e9-5d8a-4b6c-a9d7-470e061337b3"
+                  alt=""
+                  decoding="async"
+                />
+              </div>
+              <div class="hero__heading">
+                <p class="hero__kicker">Теория</p>
+                <h1 id="hero-title" class="hero__title">
+                  КОРПОРАТИВНАЯ КУЛЬТУРА<br />
+                  КОМПАНИИ
+                </h1>
+              </div>
+              <div class="hero__bottom">
+                <a class="btn-primary" href="web/dist/index.html#/osnovnye-ponyatiya">
+                  Перейти
+                  <span class="ui-icon ui-icon--22" aria-hidden="true">
+                    <span class="ui-icon__fit ui-icon__fit--arrow">
+                      <img
+                        src="https://www.figma.com/api/mcp/asset/46cc8123-9681-4bd1-98fe-017daa102fc1"
+                        alt=""
+                        decoding="async"
+                      />
+                    </span>
+                  </span>
+                </a>
+                <div class="carousel-wrap">
+                  <div id="theory-carousel" class="carousel" tabindex="0">
+                    <a class="topic-card" href="#">
+                      <span class="ui-icon ui-icon--24" aria-hidden="true">
+                        <span class="ui-icon__fit ui-icon__fit--bulb">
+                          <img
+                            src="https://www.figma.com/api/mcp/asset/103d6a66-25d8-4533-be86-134e9ca66b77"
+                            alt=""
+                            decoding="async"
+                          />
+                        </span>
+                      </span>
+                      <h3>Основные понятия</h3>
+                    </a>
+                    <a class="topic-card" href="#">
+                      <span class="ui-icon ui-icon--24" aria-hidden="true">
+                        <span class="ui-icon__fit ui-icon__fit--rocket">
+                          <img
+                            src="https://www.figma.com/api/mcp/asset/f8168797-deb8-4b7b-b4dc-7fdc9a058fcc"
+                            alt=""
+                            decoding="async"
+                          />
+                        </span>
+                      </span>
+                      <h3>Миссия и ценности</h3>
+                    </a>
+                    <a class="topic-card" href="#">
+                      <span class="ui-icon ui-icon--24" aria-hidden="true">
+                        <span class="ui-icon__fit ui-icon__fit--route">
+                          <img
+                            src="https://www.figma.com/api/mcp/asset/e0c273b0-3322-4718-a2f7-1ddf40fdf6f6"
+                            alt=""
+                            decoding="async"
+                          />
+                        </span>
+                      </span>
+                      <h3>Стратегии развития</h3>
+                    </a>
+                    <a class="topic-card" href="#">
+                      <span class="ui-icon ui-icon--24" aria-hidden="true">
+                        <span class="ui-icon__fit ui-icon__fit--user-cog">
+                          <img
+                            src="https://www.figma.com/api/mcp/asset/3063de48-53a5-4cb0-b909-c2dbf92d4954"
+                            alt=""
+                            decoding="async"
+                          />
+                        </span>
+                      </span>
+                      <h3>Корпоративные компетенции</h3>
+                    </a>
+                  </div>
+                  <button type="button" class="carousel__next" id="carousel-next" aria-label="Прокрутить вперёд">
+                    <span class="ui-icon ui-icon--18" aria-hidden="true">
+                      <span class="ui-icon__fit ui-icon__fit--chev-right">
+                        <img
+                          src="https://www.figma.com/api/mcp/asset/7fc0dd55-1ed7-43d4-a15a-a44c613c83cd"
+                          alt=""
+                          decoding="async"
+                        />
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <section class="sim-section" aria-labelledby="sim-heading">
+              <div class="sim-section__row">
+                <div class="sim-section__content">
+                  <h2 id="sim-heading">Тренируйте компетенции корпоративной культуры в наших симуляциях!</h2>
+                  <div class="sim-cards">
+                    <article class="sim-card">
+                      <div class="sim-card__inner">
+                        <div class="sim-card__deco" aria-hidden="true">
+                          <img
+                            src="https://www.figma.com/api/mcp/asset/77b70971-ce61-4826-891d-fa63ce230fc9"
+                            alt=""
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="sim-card__body">
+                          <div>
+                            <p class="sim-card__label">Симуляция</p>
+                            <p class="sim-card__title">Выход из зоны комфорта по аналитике</p>
+                          </div>
+                          <button type="button" class="btn-ghost">Начать</button>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="sim-card">
+                      <div class="sim-card__inner">
+                        <div class="sim-card__body">
+                          <div>
+                            <p class="sim-card__label">Симуляция</p>
+                            <p class="sim-card__title">Выход из зоны комфорта по общению</p>
+                          </div>
+                          <button type="button" class="btn-ghost">Начать</button>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="sim-card">
+                      <div class="sim-card__inner">
+                        <div class="sim-card__body">
+                          <div>
+                            <p class="sim-card__label">Симуляция</p>
+                            <p class="sim-card__title">SMART</p>
+                          </div>
+                          <button type="button" class="btn-ghost">Начать</button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="mascot-wrap" aria-hidden="true">
+                  <div class="mascot-wrap__shadow">
+                    <img
+                      src="https://www.figma.com/api/mcp/asset/766e5ee8-7aa6-4f44-8626-334d684bbb34"
+                      alt=""
+                      width="419"
+                      height="51"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="mascot">
+                    <img
+                      src="https://www.figma.com/api/mcp/asset/fb131d9b-de28-4815-901d-e85c7f570a1c"
+                      alt=""
+                      width="287"
+                      height="301"
+                      decoding="async"
+                    />
+                    <img
+                      src="https://www.figma.com/api/mcp/asset/feb82685-3614-4040-904a-93f74e963ed4"
+                      alt=""
+                      width="287"
+                      height="301"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var el = document.getElementById("theory-carousel");
+        var btn = document.getElementById("carousel-next");
+        if (!el || !btn) return;
+        btn.addEventListener("click", function () {
+          el.scrollBy({ left: Math.min(280, el.clientWidth * 0.6), behavior: "smooth" });
+        });
+      })();
+    </script>
+  </body>
+</html>
