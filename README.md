@@ -12,7 +12,25 @@ npm run dev
 
 Откройте адрес из терминала (обычно http://localhost:5173/).
 
-## Публикация на GitHub Pages
+## Публикация на GitHub Pages (одна команда)
+
+1. Установите [GitHub CLI](https://cli.github.com/) (если ещё нет): `winget install GitHub.cli`
+2. В PowerShell из папки проекта:
+
+```powershell
+cd "d:\cursor\курсор1"
+powershell -ExecutionPolicy Bypass -File .\scripts\deploy-github.ps1
+```
+
+При первом запуске откроется браузер — войдите в GitHub и подтвердите доступ. Скрипт создаст репозиторий `corporate-culture`, загрузит код и включит Pages.
+
+После зелёного workflow в **Actions** сайт будет здесь:
+
+`https://ВАШ_ЛОГИН.github.io/corporate-culture/`
+
+---
+
+## Публикация вручную
 
 Сообщение **«There isn't a GitHub Pages site here»** значит, что сайт ещё не задеплоен. Нужны **код в репозитории** и **успешный workflow**.
 
