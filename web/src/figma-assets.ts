@@ -89,34 +89,200 @@ export const theoryHeroDecoSm =
   "https://www.figma.com/api/mcp/asset/d2dc4847-c4a9-42a5-92f9-21e00901f8d2";
 export const theoryHeroDecoMd =
   "https://www.figma.com/api/mcp/asset/03887ed0-d5d6-433f-a273-df2737416919";
+/** Теория — светлая тема, lineList icons (DesktopsideMenu 12040:9754, маска + currentColor) */
 export const theoryImgProfile =
-  "https://www.figma.com/api/mcp/asset/d31b3f47-acbe-4c04-920c-4ad16ebad942";
+  "https://www.figma.com/api/mcp/asset/6cbcc96a-4d79-4f67-bed8-11454646a24f";
 export const theoryImgSearch =
-  "https://www.figma.com/api/mcp/asset/3ef51f96-c8d3-4694-8e8c-9cbe1de29265";
+  "https://www.figma.com/api/mcp/asset/87903692-3bc5-43d1-ac48-d73b10bccc2e";
+export const theoryIconBack =
+  "https://www.figma.com/api/mcp/asset/0d273c59-e7f6-4030-adbe-4d0486d0fa8b";
 export const theoryIconChevronLeft =
-  "https://www.figma.com/api/mcp/asset/79a9975b-681e-4ea4-84fa-9b4fb12641c4";
+  "https://www.figma.com/api/mcp/asset/239f5939-75ec-434f-8aec-b763ca6ebdb1";
 export const theoryIconLightbulb =
-  "https://www.figma.com/api/mcp/asset/99179685-2b10-4cc8-9a9b-c6b1fd46e8a8";
+  "https://www.figma.com/api/mcp/asset/9d19cf87-c9d1-4216-bcd9-b98d4aacedce";
 export const theoryIconRocket =
-  "https://www.figma.com/api/mcp/asset/46d6bc2a-2f6e-497f-bf8a-f1b661dfc9ac";
+  "https://www.figma.com/api/mcp/asset/25087b55-47c7-4636-b2d0-387807ba8ad7";
 export const theoryIconRoute =
-  "https://www.figma.com/api/mcp/asset/ef2f99e0-4935-4677-a805-096d9dcf90be";
+  "https://www.figma.com/api/mcp/asset/c8037477-7785-45b5-995b-1f44ab7b6c88";
 export const theoryIconUserCog =
-  "https://www.figma.com/api/mcp/asset/7666411f-257b-425c-af0f-772bc44fda2d";
+  "https://www.figma.com/api/mcp/asset/3f48e96b-8366-4438-a47e-375b31d462e3";
 export const theoryIconTrophy =
-  "https://www.figma.com/api/mcp/asset/3a8ebba4-f809-474b-8f56-91619fea2d40";
+  "https://www.figma.com/api/mcp/asset/a60bb919-29da-4463-9cd0-b371143becee";
 export const theoryIconHandHeart =
-  "https://www.figma.com/api/mcp/asset/9cfc8b21-68da-4ba7-a3e9-0c12a1051727";
+  "https://www.figma.com/api/mcp/asset/2f0820ba-9902-4cb6-932c-0d27ad05a680";
 export const theoryIconChart =
-  "https://www.figma.com/api/mcp/asset/976461b8-26a6-408d-8cab-f848333c8c75";
+  "https://www.figma.com/api/mcp/asset/3d2f7343-6420-4ae7-bcb0-3ee35712cb74";
 export const theoryIconMessages =
-  "https://www.figma.com/api/mcp/asset/87cb35a5-5922-4b98-b68e-c7199df3c261";
+  "https://www.figma.com/api/mcp/asset/aa4ca3fe-f1c9-4fe7-bec8-02d6e1d73edf";
 export const theoryIconAlign =
-  "https://www.figma.com/api/mcp/asset/0b4e75c4-37d7-4186-b794-708aafd5e81f";
+  "https://www.figma.com/api/mcp/asset/7b23f9ff-e941-4b8b-95f4-94a77eaeb7c5";
 export const theoryIconCrown =
-  "https://www.figma.com/api/mcp/asset/b089d188-f216-48f9-8b70-c7fe4398c054";
+  "https://www.figma.com/api/mcp/asset/30eb7cd0-9f0b-4405-a67e-7ce6292a88b6";
 export const theoryIconGitFork =
-  "https://www.figma.com/api/mcp/asset/cec8c4ae-5102-47cf-a1cb-943ab23201ba";
+  "https://www.figma.com/api/mcp/asset/1cdb5385-0beb-424c-80a1-3661f0fc0b4c";
+
+/** Страница «Миссия и ценности» (node 17018:58110) */
+export const missionMainGroup =
+  "https://www.figma.com/api/mcp/asset/a37b930a-ce3c-4541-b075-b06e9aabfc7b";
+export const valueCardBase =
+  "https://www.figma.com/api/mcp/asset/e4535ff1-157c-4ed3-8ef0-6b3e48958631";
+export const valueCardComfortZone =
+  "https://www.figma.com/api/mcp/asset/f75154b6-db6c-4b2b-981c-4bb9204af6ad";
+export const valueCardClientComfort =
+  "https://www.figma.com/api/mcp/asset/08e7a118-2a74-4384-a09b-93fad0479875";
+export const valueCardResults =
+  "https://www.figma.com/api/mcp/asset/52e6d96f-60c6-4ece-bf10-c56e23e8acd8";
+
+/** Страница «Стратегия развития» (node 17018:58113) */
+export const strategyGlow =
+  "https://www.figma.com/api/mcp/asset/fbff5976-ee02-43b3-b0da-c3256f9e46c9";
+export const strategyLineDivider =
+  "https://www.figma.com/api/mcp/asset/f84a6600-7575-44b8-b076-297fa54ac71b";
+export const strategyPhotoPolytechA =
+  "https://www.figma.com/api/mcp/asset/0758a6eb-808b-4c75-98d6-8e3821106a4a";
+export const strategyPhotoPolytechB =
+  "https://www.figma.com/api/mcp/asset/4663915e-778e-456a-a204-947ecd2ddf6f";
+export const strategyPhotoPolytechC =
+  "https://www.figma.com/api/mcp/asset/58285002-9357-427c-98c9-879b89b1c151";
+export const strategyPhotoLeadersA =
+  "https://www.figma.com/api/mcp/asset/f27922ee-d562-44b7-bebd-81664e6c51ed";
+export const strategyPhotoLeadersB =
+  "https://www.figma.com/api/mcp/asset/fb466fcc-4076-4510-8fd0-cb545377e9f5";
+export const strategyPhotoNovgorod =
+  "https://www.figma.com/api/mcp/asset/89f30c76-3d81-4be3-a9dd-09bad14965ae";
+
+/** Страница «Корпоративные компетенции» (node 17091:31371) */
+export const competenciesHeroGlow1 =
+  "https://www.figma.com/api/mcp/asset/e8259c7c-bf22-4e2d-b2e9-206fbd71bb2b";
+export const competenciesHeroGlow2 =
+  "https://www.figma.com/api/mcp/asset/c3987ad2-d53f-4bc4-91d4-e4d052c9d478";
+export const competenciesDna =
+  "https://www.figma.com/api/mcp/asset/258cd0e7-385c-41c6-b6c2-5a92750da6f6";
+export const competenciesScaleLineV =
+  "https://www.figma.com/api/mcp/asset/47c9ef1d-efd6-48d6-b0d6-c09ffefee533";
+export const competenciesScaleLineH =
+  "https://www.figma.com/api/mcp/asset/737ab4bc-36ab-461d-a4ae-892cb1b90c6c";
+
+/** Страница «Стремление к большему» (node 17018:58116) */
+export const strivingHeroGlow =
+  "https://www.figma.com/api/mcp/asset/c73bc9ce-84d4-495a-8388-5f0b0e8fa057";
+export const strivingHeroChevron =
+  "https://www.figma.com/api/mcp/asset/bdc5b445-fa5c-4ad8-9a4f-537eafd39b09";
+export const strivingHeroFigure =
+  "https://www.figma.com/api/mcp/asset/643707f3-3ab5-405d-9ba0-010853df6e3d";
+export const strivingHeroDecoLg =
+  "https://www.figma.com/api/mcp/asset/b546c9cd-806b-4477-861b-c740d815ce10";
+export const strivingHeroDecoMd =
+  "https://www.figma.com/api/mcp/asset/71c66dc0-3eb3-4b6f-994e-3e7e71f372b0";
+export const strivingHeroDecoSm =
+  "https://www.figma.com/api/mcp/asset/e062210a-ebb0-4f28-bf46-3e3037bed22f";
+
+/** Страница «Вера в дело» (node 17018:58119) */
+export const faithInfographicGlowA =
+  "https://www.figma.com/api/mcp/asset/317f9178-f452-42da-8da9-dfe5b322a9e2";
+export const faithInfographicGlowB =
+  "https://www.figma.com/api/mcp/asset/eafc2594-1cf3-4a9b-a658-e526c063ba99";
+export const faithInfographicGlowC =
+  "https://www.figma.com/api/mcp/asset/92eada3a-e072-4f89-b3f5-143a04034b82";
+export const faithInfographicGlowD =
+  "https://www.figma.com/api/mcp/asset/62a11fb9-83c1-4f60-8a6d-92e83ad46d6b";
+export const faithInfographicGlowE =
+  "https://www.figma.com/api/mcp/asset/88aa4407-d102-48f3-92ad-497178c00aeb";
+export const faithInfographicGlowF =
+  "https://www.figma.com/api/mcp/asset/382e3f7e-7086-40bd-b194-9408a7b50606";
+export const faithInfographicEllipse =
+  "https://www.figma.com/api/mcp/asset/3b1f0407-d942-46d3-8f4e-2ce774f002a5";
+
+/** Страница «ЗКА» (node 17018:58127) */
+export const zkaHeroGlow =
+  "https://www.figma.com/api/mcp/asset/939a8382-ab44-4d0d-a8cd-7c88c7477c6d";
+export const zkaSeparator =
+  "https://www.figma.com/api/mcp/asset/7cf30f96-275f-4daa-af64-e10ac808b8e9";
+export const zkaAlgorithmWave =
+  "https://www.figma.com/api/mcp/asset/1b6c34b9-3d88-43d6-836d-82b70d2f2317";
+export const zkaAlgorithmLine =
+  "https://www.figma.com/api/mcp/asset/294d2296-30fb-4112-90cb-e45b5416decb";
+export const zkaMountainGlowA =
+  "https://www.figma.com/api/mcp/asset/4687d1c7-a41b-4c6a-ba10-7897e5402ca8";
+export const zkaMountainGlowB =
+  "https://www.figma.com/api/mcp/asset/5e9cc568-29e6-45ec-a88c-0ef446c046a1";
+export const zkaMountainLayer1 =
+  "https://www.figma.com/api/mcp/asset/9b988a2b-c796-48ad-8218-60f684d21faf";
+export const zkaMountainLayer2 =
+  "https://www.figma.com/api/mcp/asset/4cc5bf73-32b4-465c-828b-36bfe3127ea7";
+export const zkaMountainLayer3 =
+  "https://www.figma.com/api/mcp/asset/3af4c352-95df-4854-ae90-0df7d8fc0e66";
+export const zkaMountainLayer4 =
+  "https://www.figma.com/api/mcp/asset/0f1f3bcd-3b5a-4a16-ab0d-4b00184dfd20";
+export const zkaMountainLayer5 =
+  "https://www.figma.com/api/mcp/asset/dde3e3e2-73cd-4679-86d9-10355669b49e";
+export const zkaMountainLayer6 =
+  "https://www.figma.com/api/mcp/asset/a8462730-2de3-4368-9c13-d4956c4f9284";
+export const zkaConditionIconShop =
+  "https://www.figma.com/api/mcp/asset/db4b0523-1299-4a0a-a90f-a8fcd36cce22";
+export const zkaConditionIconBp =
+  "https://www.figma.com/api/mcp/asset/ea174412-9ac9-498f-9d59-f91d7337c02e";
+export const zkaConditionIconPir =
+  "https://www.figma.com/api/mcp/asset/ddac1dec-0bef-48d7-9bec-3a31864dac6c";
+export const zkaConditionIconResidents =
+  "https://www.figma.com/api/mcp/asset/19cadb64-b060-48ba-9abc-b7c5d6185558";
+export const zkaCalcArrow =
+  "https://www.figma.com/api/mcp/asset/031937e2-4233-408c-b607-e39cdb4e3ce9";
+export const zkaNpvFormula =
+  "https://www.figma.com/api/mcp/asset/0832ddf9-1e65-4015-957a-e0ae86d3babe";
+/** Страница «ЗКО» (node 17186:44498) */
+export const zkoHeroGlow =
+  "https://www.figma.com/api/mcp/asset/90d1edc6-3158-42d5-96f9-d0b714cc54a0";
+export const zkoAlgorithmFlow =
+  "https://www.figma.com/api/mcp/asset/10ea79f5-68b9-4ee7-8fc2-04009501c2d9";
+export const zkoStepConnectorDown =
+  "https://www.figma.com/api/mcp/asset/dfe424cc-36e8-47ca-afe1-a925185ae74e";
+export const zkoStepConnectorUp =
+  "https://www.figma.com/api/mcp/asset/780e7fdb-101c-4035-a4fa-89653b7329d0";
+export const zkoConditionLinesBar =
+  "https://www.figma.com/api/mcp/asset/f3a7bd9c-4127-40b6-8bc8-eadc0653afe5";
+export const zkoConditionIconNegotiations =
+  "https://www.figma.com/api/mcp/asset/008bbc1f-b612-4391-82ef-609cc774e4bc";
+export const zkoConditionIconSales =
+  "https://www.figma.com/api/mcp/asset/4b434e0e-22cd-4ee7-9766-b636600edb3a";
+/** Страница «Декомпозиция» (node 17018:58120) */
+export const decompHeroGlowA =
+  "https://www.figma.com/api/mcp/asset/2fde0361-7e07-496c-a549-8f9d3bb21ed6";
+export const decompHeroGlowB =
+  "https://www.figma.com/api/mcp/asset/95b1a8c3-6309-4754-9b47-e8fb57f8b2fc";
+export const decompHeroIllustration =
+  "https://www.figma.com/api/mcp/asset/f58c596a-6704-423a-926f-5d010b59466c";
+export const decompForwardGlowA =
+  "https://www.figma.com/api/mcp/asset/0be84ce2-226a-4d19-a77c-1a3e6679b67f";
+export const decompForwardGlowB =
+  "https://www.figma.com/api/mcp/asset/e85a73e6-57a7-4dc1-b2fd-55d27f051a7f";
+export const decompForwardDiagram =
+  "https://www.figma.com/api/mcp/asset/f5e14dd9-1bfe-4272-8237-d59efa6515a5";
+export const decompInfoIcon =
+  "https://www.figma.com/api/mcp/asset/c67e6994-5690-493f-8752-3716eef4d103";
+
+export const zkoStepIcons = [
+  "https://www.figma.com/api/mcp/asset/1f33f9d4-6026-407d-a586-add08ca7e08a",
+  "https://www.figma.com/api/mcp/asset/25df93ba-d67c-4856-8162-da03e9621bab",
+  "https://www.figma.com/api/mcp/asset/ae6e840a-54bc-4567-81de-fee2550daeed",
+  "https://www.figma.com/api/mcp/asset/16d6427a-2bca-42ed-8316-17711cccd207",
+  "https://www.figma.com/api/mcp/asset/8b40878c-6324-4a70-b5ce-b25f92feaf05",
+  "https://www.figma.com/api/mcp/asset/381a9b1c-08b3-4602-83b7-bd06e730c443",
+  "https://www.figma.com/api/mcp/asset/ae6e840a-54bc-4567-81de-fee2550daeed",
+  "https://www.figma.com/api/mcp/asset/686092c9-e4da-4d6d-b468-9757f9c44689",
+];
+
+export const zkaStepIcons = [
+  "https://www.figma.com/api/mcp/asset/f9688339-c90f-4d8f-a022-65e74ea5a3b0",
+  "https://www.figma.com/api/mcp/asset/74cb3c33-2979-409a-81b3-0eca4483cea7",
+  "https://www.figma.com/api/mcp/asset/c0d4a9d4-a2d8-4502-957d-feed3478180e",
+  "https://www.figma.com/api/mcp/asset/bb0c6455-7e7a-4703-bb85-282f9289c0c6",
+  "https://www.figma.com/api/mcp/asset/467c66d3-7a34-4c1e-ad99-67ae69159b2e",
+  "https://www.figma.com/api/mcp/asset/3e77e2c2-8aae-4bab-96b6-09d04141663f",
+  "https://www.figma.com/api/mcp/asset/3ef5bc19-2fd8-444c-9074-b0dab79b70e6",
+  "https://www.figma.com/api/mcp/asset/47cf46ea-e82b-4e3c-acff-663acd57c17e",
+  "https://www.figma.com/api/mcp/asset/509b6a7f-c029-4da3-b04b-0ef73477ea28",
+];
 
 /** Тёмная тема DS MAIN: база #181a26 + синий radial glow */
 export const SIMULATION_CARD_BG = `url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 371 248\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'0.2\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(8.6 -17.986 34.689 25.001 36 222.22)\\'><stop stop-color=\\'rgba(99,166,255,1)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(138,189,255,0.6)\\' offset=\\'0.25\\'/><stop stop-color=\\'rgba(177,211,255,0.25)\\' offset=\\'0.5\\'/><stop stop-color=\\'rgba(24,26,38,1)\\' offset=\\'1\\'/></radialGradient></defs></svg>'), linear-gradient(90deg, rgb(24, 26, 38) 0%, rgb(24, 26, 38) 100%)`;

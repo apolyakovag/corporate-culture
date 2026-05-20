@@ -58,9 +58,17 @@ function LogoMin({ className }: LogoMinProps) {
 
 type HomePageProps = {
   onGoToConcepts?: () => void;
+  onGoToMission?: () => void;
+  onGoToStrategy?: () => void;
+  onGoToCompetencies?: () => void;
 };
 
-export function HomePage({ onGoToConcepts }: HomePageProps = {}) {
+export function HomePage({
+  onGoToConcepts,
+  onGoToMission,
+  onGoToStrategy,
+  onGoToCompetencies,
+}: HomePageProps = {}) {
   return (
     <div className="content-stretch flex flex-col items-start relative size-full" data-node-id="211:23284" data-name="Главная страница">
       <div className="bg-[var(--colors-surfaces-main-0,#0f1018)] content-stretch flex flex-[1_0_0] flex-col gap-[var(--body\/gap,8px)] isolate items-start min-h-px overflow-clip p-[var(--body\/padding,16px)] relative w-full" data-node-id="I211:23284;14745:5686" data-name="body">
@@ -227,7 +235,18 @@ export function HomePage({ onGoToConcepts }: HomePageProps = {}) {
                           <p className="leading-[var(--font\/heading\/h5\/lineheight,24px)]">Основные понятия</p>
                         </div>
                       </a>
-                      <a className="backdrop-blur-[20px] bg-gradient-to-b content-stretch cursor-pointer flex flex-[1_0_0] flex-col from-[var(--colors\/surfaces\/main\/lim\/10,rgba(255,255,255,0.2))] gap-[var(--spaces\/md\/30,16px)] items-start min-w-[var(--topic-card-min-width,189px)] p-[var(--spaces\/md\/30,16px)] relative rounded-[var(--br\/sm\/40,24px)] shrink-0 to-[rgba(99,166,255,0.1)]" data-node-id="I211:23284;14745:7069;14745:7003" data-name="card">
+                      <a
+                        className="backdrop-blur-[20px] bg-gradient-to-b content-stretch cursor-pointer flex flex-[1_0_0] flex-col from-[var(--colors\/surfaces\/main\/lim\/10,rgba(255,255,255,0.2))] gap-[var(--spaces\/md\/30,16px)] items-start min-w-[var(--topic-card-min-width,189px)] p-[var(--spaces\/md\/30,16px)] relative rounded-[var(--br\/sm\/40,24px)] shrink-0 to-[rgba(99,166,255,0.1)]"
+                        data-node-id="I211:23284;14745:7069;14745:7003"
+                        data-name="card"
+                        href="#/missiya-i-tsennosti"
+                        onClick={(e) => {
+                          if (onGoToMission) {
+                            e.preventDefault();
+                            onGoToMission();
+                          }
+                        }}
+                      >
                         <div className="ui-icon-slot overflow-visible relative shrink-0 size-[24px]" data-node-id="I211:23284;14745:7069;14745:7003;14745:7336" data-name="Lucid/rocket">
                           <div className="absolute inset-[4.58%_4.59%_6.67%_6.67%]" data-node-id="I211:23284;14745:7069;14745:7003;14745:7336;3659:785" data-name="Union">
                             <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgUnion6} />
@@ -237,7 +256,18 @@ export function HomePage({ onGoToConcepts }: HomePageProps = {}) {
                           <p className="leading-[var(--font\/heading\/h5\/lineheight,24px)]">Миссия и ценности</p>
                         </div>
                       </a>
-                      <a className="backdrop-blur-[20px] bg-gradient-to-b content-stretch cursor-pointer flex flex-[1_0_0] flex-col from-[var(--colors\/surfaces\/main\/lim\/10,rgba(255,255,255,0.2))] gap-[var(--spaces\/md\/30,16px)] items-start min-w-[var(--topic-card-min-width,189px)] p-[var(--spaces\/md\/30,16px)] relative rounded-[var(--br\/sm\/40,24px)] shrink-0 to-[rgba(99,166,255,0.1)]" data-node-id="I211:23284;14745:7069;14745:7011" data-name="card">
+                      <a
+                        className="backdrop-blur-[20px] bg-gradient-to-b content-stretch cursor-pointer flex flex-[1_0_0] flex-col from-[var(--colors\/surfaces\/main\/lim\/10,rgba(255,255,255,0.2))] gap-[var(--spaces\/md\/30,16px)] items-start min-w-[var(--topic-card-min-width,189px)] p-[var(--spaces\/md\/30,16px)] relative rounded-[var(--br\/sm\/40,24px)] shrink-0 to-[rgba(99,166,255,0.1)]"
+                        data-node-id="I211:23284;14745:7069;14745:7011"
+                        data-name="card"
+                        href="#/strategiya-razvitiya"
+                        onClick={(e) => {
+                          if (onGoToStrategy) {
+                            e.preventDefault();
+                            onGoToStrategy();
+                          }
+                        }}
+                      >
                         <div className="ui-icon-slot overflow-visible relative shrink-0 size-[24px]" data-node-id="I211:23284;14745:7069;14745:7011;14745:7336" data-name="Lucid/route">
                           <div className="absolute inset-[4.59%_8.75%_4.58%_8.75%]" data-node-id="I211:23284;14745:7069;14745:7011;14745:7336;3659:763" data-name="Union">
                             <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgUnion7} />
@@ -247,7 +277,18 @@ export function HomePage({ onGoToConcepts }: HomePageProps = {}) {
                           <p className="leading-[var(--font\/heading\/h5\/lineheight,24px)]">Стратегии развития</p>
                         </div>
                       </a>
-                      <div className="backdrop-blur-[20px] bg-gradient-to-b content-stretch flex flex-[1_0_0] flex-col from-[var(--colors\/surfaces\/main\/lim\/10,rgba(255,255,255,0.2))] gap-[var(--spaces\/md\/30,16px)] items-start min-w-[var(--topic-card-min-width,189px)] p-[var(--spaces\/md\/30,16px)] relative rounded-[var(--br\/sm\/40,24px)] shrink-0 to-[rgba(99,166,255,0.1)]" data-node-id="I211:23284;14745:7069;14746:8567" data-name="card">
+                      <a
+                        className="backdrop-blur-[20px] bg-gradient-to-b content-stretch cursor-pointer flex flex-[1_0_0] flex-col from-[var(--colors\/surfaces\/main\/lim\/10,rgba(255,255,255,0.2))] gap-[var(--spaces\/md\/30,16px)] items-start min-w-[var(--topic-card-min-width,189px)] p-[var(--spaces\/md\/30,16px)] relative rounded-[var(--br\/sm\/40,24px)] shrink-0 to-[rgba(99,166,255,0.1)]"
+                        data-node-id="I211:23284;14745:7069;14746:8567"
+                        data-name="card"
+                        href="#/korporativnye-kompetencii"
+                        onClick={(e) => {
+                          if (onGoToCompetencies) {
+                            e.preventDefault();
+                            onGoToCompetencies();
+                          }
+                        }}
+                      >
                         <div className="ui-icon-slot overflow-visible relative shrink-0 size-[24px]" data-node-id="I211:23284;14745:7069;14746:8567;14745:7336" data-name="Lucid/user-cog">
                           <div className="absolute inset-[8.75%_5.83%_8.75%_4.59%]" data-node-id="I211:23284;14745:7069;14746:8567;14745:7336;3659:150" data-name="Union">
                             <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgUnion8} />
@@ -256,7 +297,7 @@ export function HomePage({ onGoToConcepts }: HomePageProps = {}) {
                         <div className="flex flex-col font-[family-name:var(--fontfamily,'Roboto_Flex:Bold',sans-serif)] [word-break:break-word] font-[var(--font\/heading\/h5\/fontweight\/bold,700)] h-[40px] justify-end leading-[0] min-w-full not-italic overflow-hidden relative shrink-0 text-[color:var(--colors\/typo\/main\/10,#d2d4df)] text-[length:var(--font\/heading\/h5\/fontsize,20px)] tracking-[var(--font\/heading\/h5\/letterspacing,0.2px)] w-full" data-node-id="I211:23284;14745:7069;14746:8567;14745:6985" style={{ fontVariationSettings: "'GRAD' 0, 'XOPQ' 96, 'XTRA' 468, 'YOPQ' 79, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738, 'YTLC' 514, 'YTUC' 712, 'wdth' 100" }}>
                           <p className="leading-[var(--font\/heading\/h5\/lineheight,24px)]">Корпоративные компетенции</p>
                         </div>
-                      </div>
+                      </a>
                       <div className="flex flex-row items-center self-stretch">
                         <div className="backdrop-blur-[20px] bg-gradient-to-b content-stretch flex from-[var(--colors-surfaces-main-lim-10,rgba(255,255,255,0.2))] h-full items-center justify-center py-[10px] relative rounded-[var(--br\/lg\/50,28px)] shrink-0 to-[rgba(99,166,255,0.1)] w-[34px]" data-node-id="I211:23284;14745:7069;15027:5969">
                           <div className="bg-[var(--colors\/icon-button\/ghost\/surface\/bg\/default,rgba(15,16,24,0))] content-stretch flex items-center justify-center p-[var(--icon-button\/padding\/main,4px)] relative rounded-[var(--icon-button\/br\/basic,8px)] shrink-0" data-node-id="I211:23284;14745:7069;15027:5970" data-name="Icon-button">
